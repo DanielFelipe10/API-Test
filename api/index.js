@@ -34,15 +34,15 @@ app.get('/api/cars/:id', (req, res) =>{
 });
 
 app.post('/api/cars/', (req, res) =>{
-    const cars = {
+    const newCar = {
         id: cars.length + 1,
         brand: req.body.Marca,
         color: req.body.Color,
         condition: req.body.Condición,
         year: parseInt(req.body.Año)
     };
-    cars.push(cars);
-    res.send(cars);
+    cars.push(newCar);
+    res.send(newCar);
 });
 
 const port = process.env.port || 3000;
