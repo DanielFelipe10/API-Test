@@ -35,11 +35,11 @@ app.get('/api/cars/:id', (req, res) =>{
 
 app.post('/api/cars/', (req, res) =>{
     const newCar = {
-        id: cars.length + 1,
+        id: req.body.ID,
         brand: req.body.Marca,
         color: req.body.Color,
         condition: req.body.Condición,
-        year: parseInt(req.body.Año)
+        year: req.body.Año
     };
     cars.push(newCar);
     res.send(newCar);
