@@ -35,7 +35,7 @@ app.get('/api/cars/:id', (req, res) =>{
 
 app.post('/api/cars/', (req, res) =>{
     const newCar = {
-        id: req.body.ID,
+        id: cars.length + 1,
         brand: req.body.Marca,
         color: req.body.Color,
         condition: req.body.Condición,
